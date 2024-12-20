@@ -13,10 +13,11 @@ function Favoritos() {
       <Titulo>
         <h1>Meus Favoritos</h1>
       </Titulo>
-      <section className={styles.container}></section>
-      {favorito.map((fav) => {
-        return <Card {...fav} key={fav.id} />;
-      })}
+      <section className={styles.container}>
+        {favorito.map((fav) => {
+          return <Card {...fav} key={fav.id} />;
+        })}
+      </section>
     </>
   );
 }
