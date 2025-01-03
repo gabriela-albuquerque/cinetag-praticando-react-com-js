@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# CineTag
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CineTag é um projeto desenvolvido durante a formação em React da Alura, com o objetivo de criar uma aplicação para organização e exibição de vídeos e filmes favoritos.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- **Página Inicial:** Exibe uma lista de vídeos obtidos de uma API.
+- **Favoritos:** Permite ao usuário marcar ou desmarcar vídeos como favoritos.
+- **Player:** Reprodução de vídeos a partir de suas URLs.
+- **Roteamento:** Navegação entre diferentes páginas, incluindo uma página 404 personalizada.
 
-### `npm start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React:** Biblioteca principal para criação da interface.
+- **React Router:** Gerenciamento de rotas para criar uma aplicação de página única (SPA).
+- **CSS Modules:** Estilização local para componentes.
+- **Context API:** Gerenciamento de estado global para favoritos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Estrutura do Projeto
 
-### `npm test`
+### Componentes Principais
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Cabecalho:** Renderiza o cabeçalho da aplicação.
+- **Rodape:** Exibe o rodapé.
+- **Banner:** Mostra uma imagem representativa para cada página.
+- **Card:** Componente reutilizável para exibição de vídeos.
+- **Titulo:** Renderiza títulos estilizados para cada página.
 
-### `npm run build`
+### Contexto de Favoritos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O contexto de favoritos foi implementado utilizando a Context API do React. Este contexto permite:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Adicionar ou remover vídeos da lista de favoritos.
+- Compartilhar o estado de favoritos entre diferentes componentes da aplicação.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Roteamento
 
-### `npm run eject`
+A aplicação utiliza o React Router para gerenciar rotas:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `/`: Página inicial com a lista de vídeos.
+- `/favoritos`: Exibe os vídeos marcados como favoritos.
+- `/:id`: Reproduz um vídeo específico no player.
+- `/*`: Página 404 personalizada para rotas inexistentes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Integração com API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Os dados dos vídeos são obtidos de uma API simulada hospedada no [JSON Server](https://my-json-server.typicode.com/gabriela-albuquerque/cinetag-api/videos). As chamadas são realizadas com `fetch` e os dados são armazenados no estado local dos componentes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Conhecimentos Praticados
 
-## Learn More
+Durante o desenvolvimento do CineTag, foram praticados os seguintes conceitos:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Componentização:** Criação de componentes reutilizáveis e organizados.
+2. **Gerenciamento de Estado:** Uso de `useState` e Context API para controlar estados locais e globais.
+3. **Ciclo de Vida de Componentes:** Uso de `useEffect` para realizar chamadas à API.
+4. **Roteamento Dinâmico:** Configuração de rotas dinâmicas e aninhadas com React Router.
+5. **Renderização Condicional:** Exibição de componentes com base em condições (ex.: tratamento de erros ao carregar vídeos).
+6. **Estilização Modularizada:** Uso de CSS Modules para garantir escopo local de estilos.
+7. **Boas Práticas:** Organização de código e separação de responsabilidades entre componentes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Como Executar o Projeto
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/cinetag.git
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm start
+   ```
+4. Acesse a aplicação em seu navegador:
+   ```
+   http://localhost:3000
+   ```
