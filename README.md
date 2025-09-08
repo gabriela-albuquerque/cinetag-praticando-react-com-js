@@ -2,6 +2,8 @@
 
 CineTag é um projeto desenvolvido durante a formação em React da Alura, com o objetivo de criar uma aplicação para organização e exibição de vídeos e filmes favoritos.
 
+![alt text](cinetag-react.png)
+
 ## Funcionalidades
 
 - **Página Inicial:** Exibe uma lista de vídeos obtidos de uma API.
