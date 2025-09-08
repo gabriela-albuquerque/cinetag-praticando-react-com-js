@@ -14,9 +14,15 @@ function Favoritos() {
         <h1>Meus Favoritos</h1>
       </Titulo>
       <section className={styles.container}>
-        {favorito.map((fav) => {
-          return <Card {...fav} key={fav.id} />;
-        })}
+        {favorito.length > 0 ? (
+          favorito.map((fav) => {
+            return <Card {...fav} key={fav.id} />;
+          })
+        ) : (
+          <p className={styles.semFavoritos}>
+            Você ainda não favoritou nenhum vídeo.
+          </p>
+        )}
       </section>
     </>
   );

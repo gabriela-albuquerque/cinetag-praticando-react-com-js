@@ -1,4 +1,12 @@
 .container {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+  gap: 2em;
+}
+
+.semFavoritos {
+  text-align: center;
+  font-size: 1.25em;
+  padding: 2em 0;
+  grid-column: 1 / -1;
 }
